@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.7.2)
+  - NFDownloadButton (0.0.3)
+  - Tiercel (1.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - NFDownloadButton (~> 0.0.3)
+  - Tiercel
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - NFDownloadButton
+    - Tiercel
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  NFDownloadButton: d9e73c663dfe2e7d50742e36f7942223e019b3f3
+  Tiercel: 7d50adada8c9383beb40be0f7a91f8da9fe9c80c
+
+PODFILE CHECKSUM: a3dc34d9f4bb9fae8f3eef0cfb14d3c5ba10040a
+
+COCOAPODS: 1.5.3

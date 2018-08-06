@@ -1,16 +1,19 @@
+# 基础
+
 ## 变量
 
 关键字 `var` 来声明变量
 
- ```
- var currentLoginAttempt = 0
- ```
+```
+var currentLoginAttempt = 0
+```
+
 ##常量
 
 关键字 `let` 来声明常量
 
 ```
-let maximumNumberOfLoginAttempts = 10 
+let maximumNumberOfLoginAttempts = 10
 ```
 
 ## 类型标注
@@ -41,7 +44,7 @@ print("The current value of friendlyWelcome is \(friendlyWelcome)")
 
 ## 注释
 
-单行注释 
+单行注释
 
 ```
 // 这是一个注释
@@ -66,14 +69,15 @@ let hello = 'hello'; print(hello)
 
 整数就是没有小数部分的数字，比如 42 和 -23 。整数可以是有符号（正，零或者负）`Int`，或者无符号（正数或零）`UInt`。
 
-`Int`  可以存 -2,147,483,648 到 2,147,483,647 之间的任意值。
+`Int` 可以存 -2,147,483,648 到 2,147,483,647 之间的任意值。
 
 ## 浮点数
 
 浮点数是有小数的数字，比如 3.14159 , 0.1 , 和 -273.15 。Swift 提供了两种有符号的浮点数类型。
-1. Double代表 64 位的浮点数，至少15位精度
-2. Float 代表 32 位的浮点数，精度6位
-3. 具体使用哪种浮点类型取决于你代码需要处理的值范围。在两种类型都可以的情况下，推荐使用 Double 类型。
+
+1.  Double 代表 64 位的浮点数，至少 15 位精度
+2.  Float 代表 32 位的浮点数，精度 6 位
+3.  具体使用哪种浮点类型取决于你代码需要处理的值范围。在两种类型都可以的情况下，推荐使用 Double 类型。
 
 ## 类型安全和类型推断
 
@@ -91,10 +95,10 @@ let a = 42 // let a: Int = 42
 
 整数型字面量可以写作：
 
-* 一个十进制数，没有前缀
-* 一个二进制数，前缀是 0b
-* 一个八进制数，前缀是 0o
-* 一个十六进制数，前缀是 0x
+- 一个十进制数，没有前缀
+- 一个二进制数，前缀是 0b
+- 一个八进制数，前缀是 0o
+- 一个十六进制数，前缀是 0x
 
 下面的这些所有整数字面量的十进制值都是 17 :
 
@@ -116,7 +120,7 @@ typealias AudioSample = UInt16
 
 ## 布尔值
 
-布尔量类型 `Bool` ， Swift为布尔量提供了两个常量值， true 和 false 。
+布尔量类型 `Bool` ， Swift 为布尔量提供了两个常量值， true 和 false 。
 
 ## 元组
 
@@ -131,8 +135,8 @@ let http404Error = (404, "Not Found")
 
 可以利用可选项来处理值可能缺失的情况。可选项意味着：
 
-*  这里有一个值，他等于x
-*  这里根本没有值
+- 这里有一个值，他等于 x
+- 这里根本没有值
 
 > 在 C 和 Objective-C 中，没有可选项的概念。在 Objective-C 中有一个近似的特性，一个方法可以返回一个对象或者返回 nil 。 nil 的意思是“缺少一个可用对象”。然而，他只能用在对象上，却不能作用在结构体，基础的 C 类型和枚举值上。对于这些类型，Objective-C 会返回一个特殊的值（例如 NSNotFound ）来表示值的缺失。这种方法是建立在假设调用者知道这个特殊的值并记得去检查他。然而，Swift 中的可选项就可以让你知道任何类型的值的缺失，他并不需要一个特殊的值。
 
@@ -155,30 +159,26 @@ var surveyAnswer: String?
 ```
 
 > 注意
-> 
-> Swift 中的 nil 和Objective-C 中的 nil 不同，在 Objective-C 中 nil 是一个指向不存在对象的指针。在 Swift中， nil 不是指针，他是值缺失的一种特殊类型，任何类型的可选项都可以设置成 nil 而不仅仅是对象类型。
+>
+> Swift 中的 nil 和 Objective-C 中的 nil 不同，在 Objective-C 中 nil 是一个指向不存在对象的指针。在 Swift 中， nil 不是指针，他是值缺失的一种特殊类型，任何类型的可选项都可以设置成 nil 而不仅仅是对象类型。
 
-
-##  可选项绑定
+## 可选项绑定
 
 可以使用可选项绑定来判断可选项是否包含值，如果包含就把值赋给一个临时的常量或者变量。可选绑定可以与 if 和 while 的语句使用来检查可选项内部的值，并赋值给一个变量或常量。
 
 ```
-if let constantName = someOptional { 
-    statements 
-} 
+if let constantName = someOptional {
+    statements
+}
 ```
 
 ## 隐式展开可选项
 
 有时在一些程序结构中可选项一旦被设定值之后，就会一直拥有值。在这种情况下，就可以去掉检查的需求，也不必每次访问的时候都进行展开，因为它可以安全的确认每次访问的时候都有一个值。
 
-这种类型的可选项被定义为隐式展开可选项。通过在声明的类型后边添加一个叹号（ String! ）而非问号（  String? ） 来书写隐式展开可选项。
+这种类型的可选项被定义为隐式展开可选项。通过在声明的类型后边添加一个叹号（ String! ）而非问号（ String? ） 来书写隐式展开可选项。
 
 ```
 let possibleString: String? = "An optional string."
 let forcedString: String = possibleString! // requires an exclamation mark
 ```
-
-
-
