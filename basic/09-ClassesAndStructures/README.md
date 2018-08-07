@@ -16,7 +16,7 @@
 - 析构器让一个类的实例可以释放任何被其所分配的资源
 - 引用计数允许对一个类实例进行多次引用
 
-> 一般来说，更推荐使用结构体和枚举，因为他们  更加容易进行推断
+> 一般来说，更推荐使用结构体和枚举，因为他们更加容易进行推断
 
 ## 类和结构体的定义
 
@@ -92,7 +92,7 @@ alsoTenEighty.frameRate = 30.0
 print("The frameRate property of tenEighty is now \(tenEighty.frameRate)") // 30
 ```
 
-因为类是引用类型,所以其实 `tenEighty` and `alsoTenEighty`引用了同一个`VideoMode` 实例。 实际上他们只是两个不同名字的  相同实例。如下图：
+因为类是引用类型,所以其实 `tenEighty` and `alsoTenEighty`引用了同一个`VideoMode` 实例。 实际上他们只是两个不同名字的相同实例。如下图：
 
 ![](https://ioscaffcdn.phphub.org/uploads/images/201807/18/1/ZPCWi7DUFG.png?imageView2/2/w/1340/h/0)
 
@@ -100,7 +100,7 @@ print("The frameRate property of tenEighty is now \(tenEighty.frameRate)") // 30
 
 ## 恒等运算符
 
-因为类是引用类型， 在底层可能有多个常量和变量引用同一个类的实例。 有时需要找出两个常量或变量是否引用同一个类的实例, 可以使用下面的方法
+因为类是引用类型， 在底层可能有多个常量和变量引用同一个类的实例。有时需要判断两个常量或变量是否引用同一个类的实例, 可以使用下面的方法
 
 - 等价于 ===
 - 非等于 ===
